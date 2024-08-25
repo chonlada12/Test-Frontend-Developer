@@ -18,7 +18,7 @@ const HeaderLayout = () => {
   return (
     <div className="px-8 h-[80px] flex justify-between items-end">
       <span className="text-[34px] m-0">{title}</span>
-      <SelectLanguage value={lang} onChange={onChange} className="w-[90px]" size="large" />
+      <SelectLanguage value={lang} onChange={onChange} className="!w-[90px]" size="large" />
     </div>
   );
 };
