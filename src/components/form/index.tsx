@@ -1,4 +1,6 @@
 import { Col, Radio, Row } from 'antd';
+import { RangePickerProps } from 'antd/es/date-picker';
+import dayjs from 'dayjs';
 import { FC } from 'react';
 import { useTranslation } from 'react-i18next';
 import { ButtonCustom } from '../display';
@@ -19,6 +21,11 @@ interface CreateFormProps {
 
 export const CreateForm: FC<CreateFormProps> = ({ onClear }) => {
   const { t } = useTranslation();
+
+  const disabledDate: RangePickerProps['disabledDate'] = (current) => {
+    return current && current > dayjs().endOf('day');
+  };
+
   return (
     <div className="box-form">
       <Row gutter={[10, 10]} className="w-full">
@@ -35,7 +42,7 @@ export const CreateForm: FC<CreateFormProps> = ({ onClear }) => {
 
       <Row gutter={[10, 10]} className="w-full">
         <FormItem span={8} name="dateOfBirth" label={t('date-of-birth')} rules={[{ required: true }]}>
-          <DateCustom />
+          <DateCustom disabledDate={disabledDate} />
         </FormItem>
         <FormItem span={10} name="nationality" label={t('nationality')} rules={[{ required: true }]}>
           <SelectNationality />
