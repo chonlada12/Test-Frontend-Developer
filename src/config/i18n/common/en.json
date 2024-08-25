@@ -36,5 +36,6 @@
   "title": "Title",
   "select-title": "Select Title",
   "select-nationality": "-- Select Nationality --",
-  "m/d/y": "Month/Day/Year"
+  "m/d/y": "Month/Day/Year",
+  "enter-phone-number": "Enter phone number"
 }

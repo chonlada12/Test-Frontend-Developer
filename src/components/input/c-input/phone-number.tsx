@@ -20,7 +20,7 @@ export const InputPhoneNumber: FC<InputPhoneNumberProps> = ({ onChange, ...props
       onChange={onChangePhoneNumber}
       {...props}
       className="phoneNumber"
-      placeholder={t('Enter phone number')}
+      placeholder={t('enter-phone-number')}
     />
   );
 };
