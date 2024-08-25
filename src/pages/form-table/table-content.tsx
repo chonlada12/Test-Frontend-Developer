@@ -29,10 +29,12 @@ const TableContent = ({ form }: TableContentProps) => {
   };
 
   const onDelete = (record: PersonalData) => {
+    if (!record.id) return;
     dispatch({ type: 'personal/deleteId', payload: record.id });
   };
 
   const onMultiDelete = () => {
+    if (selectedRowKeys.length === 0) return;
     dispatch({ type: 'personal/multiDelete', payload: selectedRowKeys });
     setSelectAll(false);
   };
@@ -89,14 +91,6 @@ const TableContent = ({ form }: TableContentProps) => {
 
   const onSelectChange = (newSelectedRowKeys: React.Key[]) => {
     setSelectedRowKeys(newSelectedRowKeys);
-    if (
-      newSelectedRowKeys.length === 10 ||
-      (dataTAble.length <= 10 && newSelectedRowKeys.length === dataTAble.length)
-    ) {
-      setSelectAll(true);
-    } else {
-      setSelectAll(false);
-    }
   };
 
   const rowSelection: TableRowSelection<PersonalData> = {

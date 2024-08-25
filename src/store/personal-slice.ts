@@ -14,7 +14,7 @@ export const personalSlice = createSlice({
       const { payload } = action;
       const id = dayjs().unix();
       const name = `${payload.title} ${payload.firstName} ${payload.lastName}`;
-      const dataForm = { id, name, ...payload };
+      const dataForm = { ...payload, id, name };
       const data = [dataForm, ...state];
 
       setObjectStorage(ENUM_KEY_LOCAL_STORAGE['@personal-data'], data);
