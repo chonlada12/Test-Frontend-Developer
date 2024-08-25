@@ -44,7 +44,7 @@ const TableContent = ({ form }: TableContentProps) => {
       title: t('name'),
       dataIndex: 'name',
       key: 'name',
-      sorter: (a, b) => a.name.length - b.name.length,
+      sorter: (a, b) => a.name.localeCompare(b.name),
       render: (__, rc) => {
         const name = `${t(rc.title)} ${rc.firstName} ${rc.lastName}`;
         return <div>{name}</div>;
@@ -54,7 +54,7 @@ const TableContent = ({ form }: TableContentProps) => {
       title: t('gender'),
       dataIndex: 'gender',
       key: 'gender',
-      sorter: (a, b) => a.gender.length - b.gender.length,
+      sorter: (a, b) => t(a.gender).localeCompare(t(b.gender)),
       render: (__, rc) => {
         return <div>{t(rc.gender)}</div>;
       },
@@ -63,13 +63,13 @@ const TableContent = ({ form }: TableContentProps) => {
       title: t('phone-number'),
       dataIndex: 'phoneNumber',
       key: 'phoneNumber',
-      sorter: (a, b) => a.phoneNumber.length - b.phoneNumber.length,
+      sorter: (a, b) => a.phoneNumber.localeCompare(b.phoneNumber),
     },
     {
       title: t('nationality'),
       dataIndex: 'nationality',
       key: 'nationality',
-      sorter: (a, b) => a.nationality.length - b.nationality.length,
+      sorter: (a, b) => t(a.nationality).localeCompare(t(b.nationality)),
       render: (__, rc) => {
         return <div>{t(rc.nationality)}</div>;
       },
