@@ -1,0 +1,110 @@
+@use 'color';
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  height: calc(100vh - 80px);
+}
+
+.card {
+  background-color: white;
+  width: 250px;
+  padding: 1.5rem;
+  border-radius: 2px;
+  cursor: pointer;
+
+  .card-title {
+    padding-bottom: 1rem;
+  }
+
+  .card-body {
+    padding-top: 1rem;
+  }
+}
+
+.box-form {
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+
+.form-item {
+  .ant-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    label {
+      font-size: 16px;
+      &::before {
+        font-size: 16px !important;
+      }
+    }
+  }
+}
+
+.card-layout {
+  @extend .center;
+  background-color: white;
+  height: 130px;
+  padding: 0.5rem;
+  border-radius: 10px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: color.$primary-orange;
+  }
+}
+
+.button-position {
+  display: flex;
+  justify-content: center;
+  background-color: color.$primary-green;
+  color: white;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 50px;
+}
+
+.phoneNumber {
+  height: 40px;
+  width: 100%;
+  .PhoneInputCountry {
+    height: 40px;
+    background-color: white !important;
+    border-radius: 8px;
+    padding: 0 10px;
+  }
+  input {
+    width: 100% !important;
+    height: 40px;
+    border-radius: 8px;
+    padding: 0 10px;
+    border: 1px solid white;
+  }
+  input:hover,
+  input:focus {
+    outline: none;
+    border: 1px solid color.$primary-blue;
+  }
+}
+
+.input-id-card {
+  // width: 100%;
+  height: 40px;
+  border-radius: 8px;
+  padding: 0 10px;
+  border: 1px solid white;
+  &:hover,
+  &:focus {
+    outline: none;
+    border: 1px solid color.$primary-blue;
+  }
+}

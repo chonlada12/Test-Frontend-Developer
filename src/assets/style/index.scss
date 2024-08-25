@@ -1,0 +1,17 @@
+@use 'color';
+@use 'custom';
+@use 'shape';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html * {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+}
+
+body {
+  margin: 0px;
+  background: linear-gradient(90deg, color.$primary-green, color.$primary-orange) !important;
+}

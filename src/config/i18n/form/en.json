@@ -1,0 +1,9 @@
+{
+  "required": "This field is required",
+  "number": "Invalid number format",
+  "email": "Invalid email format",
+  "phone-number": "Invalid phone number format",
+  "please-complete-the-information": "Please complete the information",
+  "whitespace": "Whitespace is not allowed",
+  "alphabet": "Invalid characters [a-z, A-Z, 0-9, _, -]"
+}

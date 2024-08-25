@@ -1,0 +1,58 @@
+@use 'color';
+
+.bg-color {
+  background-color: color.$primary-gray;
+}
+
+.height {
+  height: 110px;
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 55px solid transparent;
+  border-right: 55px solid transparent;
+  border-bottom: 110px solid color.$primary-gray;
+}
+
+.circle {
+  @extend .bg-color;
+  @extend .height;
+  border-radius: 50%;
+  width: 110px;
+}
+
+.square {
+  @extend .bg-color;
+  @extend .height;
+  width: 110px;
+}
+
+.oval {
+  @extend .bg-color;
+  @extend .height;
+  width: 220px;
+  border-radius: 50%;
+}
+
+.rectangle {
+  @extend .bg-color;
+  @extend .height;
+  width: 240px;
+}
+
+.parallelogram {
+  @extend .bg-color;
+  @extend .height;
+  width: 220px;
+  transform: skew(20deg);
+}
+
+.trapezoid {
+  border-bottom: 100px solid color.$primary-gray;
+  border-left: 55px solid transparent;
+  border-right: 55px solid transparent;
+  height: 0;
+  width: 180px;
+}
